@@ -1,9 +1,9 @@
 Installation 
 
 
-cd PostonCast/
-gem install bundler
-bundle install
-rake db:create
-rake db:migrate
+cd PostonCast <br>
+gem install bundler <br>
+bundle install <br>
+rake db:create <br>
+rake db:migrate <br>
 
