@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nomgroupe:</strong>
+  <%= @groupe_podcast.nomGroupe %>
+</p>
+
+<p>
+  <strong>Prenom:</strong>
+  <%= @groupe_podcast.prenom %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @groupe_podcast.email %>
+</p>
+
+<p>
+  <strong>Pwd:</strong>
+  <%= @groupe_podcast.pwd %>
+</p>
+
+<%= link_to 'Edit', edit_groupe_podcast_path(@groupe_podcast) %> |
+<%= link_to 'Back', groupe_podcasts_path %>

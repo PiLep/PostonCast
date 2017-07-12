@@ -1,0 +1,37 @@
+<%= form_with(model: groupe_podcast, local: true) do |form| %>
+  <% if groupe_podcast.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(groupe_podcast.errors.count, "error") %> prohibited this groupe_podcast from being saved:</h2>
+
+      <ul>
+      <% groupe_podcast.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nomGroupe %>
+    <%= form.text_field :nomGroupe, id: :groupe_podcast_nomGroupe %>
+  </div>
+
+  <div class="field">
+    <%= form.label :prenom %>
+    <%= form.text_field :prenom, id: :groupe_podcast_prenom %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :groupe_podcast_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pwd %>
+    <%= form.text_field :pwd, id: :groupe_podcast_pwd %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Groupe Podcasts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nomgroupe</th>
+      <th>Prenom</th>
+      <th>Email</th>
+      <th>Pwd</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @groupe_podcasts.each do |groupe_podcast| %>
+      <tr>
+        <td><%= groupe_podcast.nomGroupe %></td>
+        <td><%= groupe_podcast.prenom %></td>
+        <td><%= groupe_podcast.email %></td>
+        <td><%= groupe_podcast.pwd %></td>
+        <td><%= link_to 'Show', groupe_podcast %></td>
+        <td><%= link_to 'Edit', edit_groupe_podcast_path(groupe_podcast) %></td>
+        <td><%= link_to 'Destroy', groupe_podcast, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Groupe Podcast', new_groupe_podcast_path %>
