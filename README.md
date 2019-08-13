@@ -7,3 +7,4 @@ bundle install <br>
 rake db:create <br>
 rake db:migrate <br>
 
+bin/rails server
